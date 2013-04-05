@@ -7,7 +7,7 @@ var esprima = require('esprima')
  * YOUR CODE BELOW HERE
  ********************************/
 
-function findVariables(js) {
+function findIdentifiers(js) {
   var ast = esprima.parse(js);
   var list = [];
   return list;
@@ -18,14 +18,14 @@ function findVariables(js) {
  ********************************/
 
 assert.deepEqual(
-  findVariables('var x = 7;'),
+  findIdentifiers('var x = 7;'),
   [ 'x' ]
 );
 
 var script = fs.readFileSync('sample.js').toString();
 
 assert.deepEqual(
-  findVariables(script),
+  findIdentifiers(script),
   [ "console", "foo", "i", "log", "str" ]
 );
 
