@@ -1,7 +1,7 @@
 var assert = require('assert');
 
 /********************************
- * YOUR CODES HERE
+ * YOUR CODE BELOW HERE
  ********************************/
 
 function reverse(str) {
@@ -9,7 +9,7 @@ function reverse(str) {
 }
 
 /********************************
- * YOUR CODES HERE
+ * YOUR CODE ABOVE HERE
  ********************************/
 
 assert.equal(

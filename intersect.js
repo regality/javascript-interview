@@ -1,7 +1,7 @@
 var assert = require('assert');
 
 /********************************
- * YOUR CODES HERE
+ * YOUR CODE BELOW HERE
  ********************************/
 
 function arrayIntersect(a, b) {
@@ -9,7 +9,7 @@ function arrayIntersect(a, b) {
 }
 
 /********************************
- * YOUR CODES HERE
+ * YOUR CODE ABOVE HERE
  ********************************/
 
 assert.deepEqual(

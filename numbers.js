@@ -3,7 +3,7 @@ var assert = require('assert');
 var numberGetters = [];
 
 /********************************
- * YOUR CODES HERE
+ * YOUR CODE BELOW HERE
  ********************************/
 
 for (var i = 1; i <= 10; ++i) {
@@ -13,7 +13,7 @@ for (var i = 1; i <= 10; ++i) {
 }
 
 /********************************
- * YOUR CODES HERE
+ * YOUR CODE ABOVE HERE
  ********************************/
 
 assert.equal(
