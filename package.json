@@ -1,0 +1,10 @@
+{
+  "name": "interview",
+  "version": "0.0.0",
+  "description": "javascript interview questions",
+  "dependencies": {
+    "esprima": "~1.0.2"
+  },
+  "author": "Adam Blackburn",
+  "license": "MIT"
+}
