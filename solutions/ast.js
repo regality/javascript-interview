@@ -15,16 +15,15 @@ function findIdentifiers(js) {
       list.push(node.name);
     }
   });
+  return uniq(list).sort();
+}
 
-  list.sort();
-
-  for (var i = 0; i < list.length; ++i) {
-    if (list[i] === list[i + 1]) {
-      list.splice(i, 1);
-      i -= 1;
-    }
-  }
-  return list;
+function uniq(list) {
+  return list.filter(function(v, i) {
+    return !list.some(function(w, j) {
+      return j > i && v === w;
+    });
+  });
 }
 
 function iterate(tree, fn) {
