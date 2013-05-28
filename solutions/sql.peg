@@ -1,0 +1,31 @@
+start          = select / delete / insert
+
+delete         = "DELETE" __ "FROM" __ table:identifier
+                 { return { operation: 'DELETE', table: table } }
+
+select         = "SELECT" __ columns:cols __ "FROM" __ table:identifier
+                 { return { operation: 'SELECT', table: table, columns: columns } }
+
+insert         = "INSERT" __ .*
+                 { return { error: "INSERT not supported" } }
+
+cols           = star / commaSep
+
+star           = "*"
+
+commaSep       = first:identifier rest:commaIdentifer*
+                 { rest.unshift(first);
+                   return rest }
+
+commaIdentifer = _ "," _ ident:identifier
+                 { return ident }
+
+identifier     = first:[a-zA-Z_] rest:[a-zA-Z0-9_]*
+                 { return first + rest.join('') }
+
+whitespace     = " "
+
+__             = whitespace+
+
+_              = whitespace*
+
